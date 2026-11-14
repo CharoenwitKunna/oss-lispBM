@@ -141,6 +141,12 @@ ifneq (,$(filter curl, $(FEATURES)))
 	LDFLAGS += -lcurl
 endif
 
+# SocketCAN (Linux only, no external library needed)
+ifneq (,$(filter socketcan, $(FEATURES)))
+	CCFLAGS  += -DWITH_SOCKETCAN
+	REPL_SRC += lbm_socketcan.c
+endif
+
 # VESC platform extension stubs
 ifneq (,$(filter vesc, $(FEATURES)))
 	CCFLAGS  += -DWITH_VESC
@@ -247,6 +253,7 @@ help:
 	@echo "Add a 'FEATURES' list to select REPL features:"
 	@echo "64       - Build 64Bit LispBM REPL"
 	@echo "alsa     - Sound and midi, builds the LispBM soft synth."
+	@echo "socketcan - Linux SocketCAN: can-open, can-send-sid/eid, CAN rx events."
 	@echo "sdl      - Adds SDL support for graphics."
 	@echo "freetype - Use libfreetype for font preprocessing."
 	@echo "coverage  - Build with coverage information collection."

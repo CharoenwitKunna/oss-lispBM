@@ -61,6 +61,10 @@ void moons_model_register(void); // tinyml/moons/moons_adapter.c
 #include "vesc_extension_stubs.h"
 #endif
 
+#ifdef WITH_SOCKETCAN
+#include "lbm_socketcan.h"
+#endif
+
 #ifdef WITH_CURL
 #include <curl/curl.h>
 #endif
@@ -1961,6 +1965,11 @@ int init_exts(void) {
 
 #ifdef WITH_VESC
   load_vesc_extension_stubs();
+#endif
+
+#ifdef WITH_SOCKETCAN
+  // After the VESC stubs so the real CAN functions override them.
+  lbm_socketcan_load_extensions();
 #endif
 
   if (lbm_get_num_extensions() < lbm_get_max_extensions()) {
