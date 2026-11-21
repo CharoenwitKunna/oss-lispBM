@@ -87,7 +87,7 @@ static void post_frame(struct can_frame *f) {
     f_cons(&fv) &&
     f_sym(&fv, eid ? sym_event_can_eid : sym_event_can_sid) &&
     f_cons(&fv) &&
-    f_u32(&fv, id) &&
+    f_i32(&fv, (int32_t)id) &&
     f_lbm_array(&fv, len, f->data) &&
     lbm_finish_flatten(&fv);
   if (!ok || !lbm_event(&fv)) {
