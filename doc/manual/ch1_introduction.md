@@ -814,7 +814,7 @@ Below is a list of LBM types:
 
 Because LBM associates types with runtime values, this type
 information has to be stored somewhere. In LBM the type information is
-stored as part of the value word in in the case of `type-char`,
+stored as part of the value word in the case of `type-char`,
 `type-i`, `type-u`, `type-list` and `type-symbol`. This is the reason
 why a `type-i` value is a 28bit (56 on 64 bit architecture) quantity,
 the rest of the bits are used for type information. The larger numerical
