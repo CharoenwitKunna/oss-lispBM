@@ -9772,7 +9772,7 @@ The form of a `macro` expression is: `(macro args body)`
 
 "Call with current continuation" is called `call-cc` in LBM. Call with current continuation saves the "current continuation", which encodes what the evaluator will do next, into an object in the language. This encoded continuation object behaves as a function taking one argument. 
 
-The `call-cc` should be given a function, `f`, as the single argument. This function, `f`, should also take a single argument, the continuation. At any point in the body of `f` the continuation can be applied to a value, in essense replacing the entire `call-cc` with that value. All side-effecting operations up until the application of the continuation will take effect. 
+The `call-cc` should be given a function, `f`, as the single argument. This function, `f`, should also take a single argument, the continuation. At any point in the body of `f` the continuation can be applied to a value, in essence replacing the entire `call-cc` with that value. All side-effecting operations up until the application of the continuation will take effect. 
 
 From within a `call-cc` application it is possible to bind the continuation to a global variable which will allow some pretty arbitrary control flow. 
 
