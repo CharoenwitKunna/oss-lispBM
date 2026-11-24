@@ -367,7 +367,7 @@ The chart below shows the time it takes to perform 10 million additions on the x
 
 In 64Bit mode the x86 version of LBM shows negligible differences in cost of additions at different types. 
 
-For addition performance on embedded systems, we use the the EDU VESC motorcontroller as the STM32F4 candidate and the VESC EXPRESS for a RISCV data point. 
+For addition performance on embedded systems, we use the EDU VESC motorcontroller as the STM32F4 candidate and the VESC EXPRESS for a RISCV data point. 
 
 ![Performance of 100000 additions at various types on ESP32C3 and STM32F4](./images/lbm_arith_embedded.png "Performance of 100000 additions at various types on ESP32C3 and STM32F4")
 
