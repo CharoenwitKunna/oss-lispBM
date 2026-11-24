@@ -475,7 +475,7 @@ and `2`.
 Quote is a bit interesting as it does not follow the pattern of a
 function application, which is a list where the first element is
 assumed to be function.  The quote mark, `'` is placed before the
-thing it "operates" on and it is not not enclosed in parenthesis! Now,
+thing it "operates" on and it is not enclosed in parenthesis! Now,
 this is just syntax and as the LBM code is read by the parser all
 things of the form `'a` is expanded into `(quote a)` and `(quote a)`
 fits the familiar pattern very well. Still, `quote` is not quite a
