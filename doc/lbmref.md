@@ -9114,7 +9114,7 @@ Use `self` to obtain the thread-id of the thread in which `self` is evaluated. T
 
 ### wait
 
-Use `wait` to wait for a spawned process to finish. The argument to `wait` should be a process id. The `wait` blocks until the process with the given process id finishes. When the process with with the given id finishes, the wait function returns True. 
+Use `wait` to wait for a spawned process to finish. The argument to `wait` should be a process id. The `wait` blocks until the process with the given process id finishes. When the process with the given id finishes, the wait function returns True. 
 
 Be careful to only wait for processes that actually exist and do finish. Otherwise you will wait forever. 
 
